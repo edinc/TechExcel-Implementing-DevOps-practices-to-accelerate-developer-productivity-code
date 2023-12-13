@@ -1,6 +1,8 @@
+name: Deploy to Azure
+
 on:
-    workflow_dispatch:
-     inputs:
+  workflow_dispatch:
+   inputs:
       appenv:
         type: choice
         description: Choose the target environment
@@ -9,8 +11,7 @@ on:
           - test
           - prod
   
-  name: Deploy to Azure
-  jobs:
+jobs:
     build-and-deploy:
       runs-on: ubuntu-latest
       steps:
